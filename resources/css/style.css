@@ -1,0 +1,547 @@
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+html{
+font-family:'lato', sans-serif;
+font-size: 20px;
+color: #5a5a5a;
+background-color: white;
+text-rendering: optimizeLegibility;
+}
+ body{
+    overflow-x: hidden;
+     /*CHÚ Ý: làm cho trang web vừa kích cỡ*/ 
+ }
+ /* --------------------------NHỮNG THUỘC TÍNH SỬ DỤNG LẠI NHIỀU LẦN------------------------- */
+ /* ----------------------------------------------------------------------------------------- */
+ .btn{
+    text-decoration: none;
+    color: white;
+    background-color: royalblue;
+    padding: 15px 30px;
+    border-radius: 20px;
+    /* tạo đường viền tròn cho phần bao ngoài của chữ */
+    margin: 0 5px;
+    display: inline-block;
+    /* chỉnh được cả hai thuộc tính của inline và block */
+    width: 20%;
+    text-align: center;
+    /* căn giữa các chữ trong btn */
+    }
+    .btn:hover,
+    .btn:active{
+      background-color: blue;
+      /* tạo màu khi di chuột vào btn  */
+    }
+    .clearfix::after{
+        content:"" ;
+        display: table;
+        clear: both;
+    }
+    .row{
+        
+        width: 100%;
+        /* THUỘC TÍNH QUAN TRỌNG */
+        margin: 0 auto;
+    }
+    .p-long{
+      text-align: center;
+      color:  #265077;
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 101%;
+     margin-left: -9px;
+      background-color: white
+    }
+    section{
+        margin:60px;
+    }
+    
+
+    
+ /* phân chia các phần CODE bằng lệnh comment------------------------------------------------ */
+ /* ------------------------------------------PHẦN HEADER------------------------------------ */
+ /* ----------------------------------------------------------------------------------------- */
+ header{
+
+ 
+    height: 700px;
+/* chiều cao mà bức ảnh chiếm trong phần header */
+background-attachment: fixed;
+    /* thuộc tính này làm cho ảnh quả táo trong phần header giữ nguyên vị trí khi trang web cuộn xuống */
+    background-position: center;
+/* căn giữa hình ảnh */
+ background-size: cover; 
+    /* căn chỉnh bức ảnh vừa đủ cho phần header của html */
+background-image:linear-gradient(rgba(2,33,64,0.8) 55%,rgba(45,95,93,0.85)),url("../img/ảnh\ quả\ táo.jpg")
+/* url hiển thị bức ảnh trong img lên trang web
+    linear-gradient phối màu cho trang web,55% tạo độ phủ sóng cho màu có nó,
+    sử dụng rgba để có thêm khả năng làm mờ"vd:0,8"*/
+
+ } */
+ .sticky{
+     background-color: #093b5a;
+     position: fixed;
+     z-index: 900;
+     width: 100%;
+     height: 90px;
+     top: 0;
+     left: 0;
+ }
+ .sticky .logo{
+     width: 250px;
+     margin-top: -40px;
+ }
+ .sticky .phanhai{
+     margin-top: 30px;
+
+ }
+ .sticky .mobile-nav-icon{
+     top: 30px;
+ }
+ .mobile-nav-icon{
+     font-size: 200%;
+     color: #0d70d3;
+     position: absolute;
+     top: 55px;
+     right: 40%;
+ }
+ .logo{
+     margin-top: -50px;
+    margin-left: 70px;
+    float: left;
+    width: 350px;
+}
+
+.phanhai li a{
+    padding: 3px 0;
+    /* tạo kcách giữa các đường link vs dấu gạch chân */
+    transition: border-bottom 0,5s;
+     /*dùng để chỉnh thời gian hiển thị dấu gạch chân ở "phanhai"  */
+    font-weight: 700;
+    font-size: 200%;
+    color: rgb(8, 8, 8);
+    /* tạo màu cho link */
+    text-decoration: none;
+    /* làm mất gạch chân ở các chữ trong "phanhai" */
+}
+.phanhai li{
+    display: inline-block;
+    /* làm cho các đường link trong "phanhai" hiển thị trên cùng 1 dòng */
+    margin-right: 30px;
+}
+.phanhai{
+    margin-right: 50px;
+    margin-top: 50px;
+    list-style: none;
+    /* thuộc tính này làm mất những dấu chấm ở đầu dòng vs "none-không dùng" 
+    còn tạo hình vuông thay dấu chấm là"square" */
+    float: right;
+    background-color: #d7f7f8;
+}
+ .phanhai li a:hover,
+ .phanhai li a:active{
+     border-bottom: 2px solid aqua;
+     /* tạo dấu gạch chân cho các đường link ở phần hai */
+ }
+
+
+.phanchutrongheader{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-45%,-55%);
+/* dùng để dịch chuyển phần chữ ra giữa trang web hoặc chỗ khác tuỳ vào % */
+width: 1140px;
+}
+.chu{
+    /* chữ trong phần h1 */
+text-transform: uppercase;
+/* biến tất cả các chữ trong h1 thành in hoa */
+font-size: 400%;
+font-weight: 400;
+/* chỉnh font chữ */
+letter-spacing: 1px;
+/* là khoảng cách giữa các chữ vs nhau */
+word-spacing: 5px;
+/* là khoảng cách giữa các từ vs nhau */
+color: rgb(15, 15, 15);
+}
+/* -----------------------------------END HEADER------------------------------------------- */
+/* ======================================================================================== */
+/* -----------------------------------ABOUT SECTION---------------------------------------- */
+
+.about-section{
+    margin: 0 auto;
+    height: 100vh;
+    width:1200px;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(209, 198, 132, 0.1) 55%,rgba(241, 241, 190, 0.05)),url("../img/núi\(2\).jpg");
+}
+.about-section .chuhai{
+    margin-bottom: 40px;
+}
+.chuhai{
+    /* chữ trong phần about */
+    text-transform: uppercase;
+letter-spacing: 1px;
+color: dodgerblue;
+font-size: 200%;
+font-weight: 700;
+text-align: center;
+}
+.chuhai:after{
+    /* phần kẻ ngang dưới chữ about us */
+   content: " ";
+   display: block;
+   width: 200px;
+   height: 3px;
+   background-color: darkslateblue; 
+  margin: 0 auto;
+  margin-top: 7px;
+}
+.about-picture img{
+    /*  viền của các bức tranh */
+    width: 90%;
+    /* làm cho bức tranh thu nhỏ đến 95% bức tranh lúc đầu */
+    border-radius: 20px;
+    border: 4px solid #618fbbbb;
+    box-shadow: -10px 10px  15px                  1px                 #061e36;
+    /*            X  - Y  - ĐỘ MỜ  - độ phóng to của bóng sau tranh ;
+    tạo độ mờ độ phóng rộng cho màu chữ ở phía sau */
+    /* filter: brightness(60%) blur(2px); */
+    /* thuộc tính blur làm mờ bức tranh */
+    transition: all ,0.5s;
+}
+.about-picture{
+    /* căn picture-title vào trong bức tranh */
+    position: relative;
+    margin-top: 50px; 
+}
+.about-picture:hover img,
+.about-picture:active img{
+    filter: brightness(80%) blur(2px); 
+}
+.picture-title{
+    /* phần chữ của các bức tranh */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: deepskyblue; 
+    transform: translate(-65%,100%);
+    opacity: 0;
+    /* làm cho chữ ở toạ độ (-65%,100%) mờ đến ko hiển thị */
+    transition: all ,0.5s;
+    /* làm chữ hiển thị theo thời gian */
+}
+
+
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title{
+    /* tạo sự hiển thị chữ ở các nơi khác nhau trong bức ảnh */
+  transform: translate(-65%,-50%);
+  opacity: 1;
+  /* tạo độ mờ cho chữ tại toạ độ (-65%,-50%) là 1 */
+}
+
+/* ========================================================================================== */
+/* ----------------------------------PRODUCTS SECTION---------------------------------------- */
+.products-section{
+    margin: 0 auto;
+    height: 100vh;
+    /* thuộc tính quan tr */
+    width:1200px;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(2,33,64,0.0015) 55%,rgba(45,95,93,0.001)),url("../img/thiên\ hà\ \(2\).jpg");
+    background-color: #cac3ec;
+}
+.products-section .chuhai{margin-bottom: 40px;}
+.product-box{
+    width: 90%;
+    background-color: aqua;
+    height: 350px;
+    margin: 0 auto;
+    box-shadow: 3px 5px 10px #eeefff;
+    
+}
+.chuba{
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color:  #265077;
+    color: aquamarine;
+    margin-bottom: 25px;
+}
+.producs-prime{
+    color: #1e4258;
+    font-size: 250%;
+    font-weight: 200;
+    text-align: center;
+}
+.producs-prime span{
+    font-size: 100%;
+    font-weight: 100;
+}
+.product-box ul li {
+    margin-left: 10%;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 130% ;
+}
+.small-icon{
+    color: dodgerblue;
+    font-size: 150%;
+    margin-right: 10px;
+}
+.product-box .btn{
+    margin-left:20%;
+    width: 60%;
+}
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+.testiomonials-section{
+    margin: 0 auto;
+    height: 100vh;
+    width:1200px;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(2,33,64,0.8) 55%,rgba(45,95,93,0.85)),url("../img/tri-tue-nhan-tao-viet-nam-2018-tao-dung-mang-luoi-ket-noi-cac-tri-thuc-nguoi-viet-tai-cac-quoc-gia-1.jpg");
+}
+.testiomonials-section .chuhai{
+    margin-bottom: 70px;
+}
+cite img{
+    height: 100px;
+    border-radius: 50%;
+    vertical-align: middle; 
+}
+blockquote::before{
+    content: "A";
+    display: block;
+    margin-left: 100px;
+    color: rgb(216, 245, 229);
+}
+blockquote{
+    width: 95%;
+    font-style: italic;
+    line-height: 160%;
+    color: aquamarine;
+}
+cite{
+    margin-top: 25px;
+    display: block;
+    color: #d7f7f8;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -------------------------------------nhataitro------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.nhataitro-section{
+background-color:white;
+margin: 0 auto;
+height: 140vh;
+width:1200px;
+background-position: center;
+background-size: cover;
+}
+.nhataitro-section .chuhai{
+    margin-bottom: 70px;
+}
+.nhataitro-section .nhataitro{
+
+}
+.nhataitro-showcase{
+margin-left: 9%;
+}
+.nhataitro-showcase li{
+list-style:none;
+float: left;
+width:30%;
+text-align: center;
+margin-bottom: 40px;
+}
+.logo-nhataitro{
+width: 200px;
+cursor: pointer;
+transition: all .3s;
+}
+figcaption{
+    margin-top: 20px;
+    cursor: pointer;
+    color: #0d70d3;
+    font-weight: 600;
+    font-size: 120%;
+}
+.nhataitro-showcase li .logo-nhataitro:hover,
+.nhataitro-showcase li .logo-nhataitro:active{
+    transform: scale(1.1);
+}
+/* ----------------------------------------------------------------------------------------- */
+/* -----------------------------------CONTACT FORM------------------------------------------ */
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* --------------------------------------FOOTER-------------------------------------------- */
+.phancuoi{
+    background-color: #061e36;
+    text-align: center;
+    color:white;
+    padding: 10px;
+    width: 1200px;
+    margin: 0 auto;
+        
+}
+.contact-section {
+    
+    background-image: linear-gradient(rgba(28, 98, 168, 0.8) 55%,rgba(45,95,93,0.085)),url("../img/phat-tan-thong-tin-hinh-anh-cua-nguoi-khac.gif");
+    height:75vh;
+    width:1200px;
+    margin: 0 auto;
+    background-position: center;
+background-size: cover;
+margin: 0 auto;
+background-attachment: fixed;
+margin-top: -200px;
+}
+.information{
+    list-style: none;
+    margin-top: 70px;
+    color:white;
+    line-height: 200%;
+    word-spacing: 1px;
+    font-size: 95%;
+}
+.information .small-icon{
+    color: #61aeec;
+    transition: all .2s;
+}
+.information i{
+    margin-left: 10px;
+}
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+.social-icon{
+    margin-top: 50px;
+    list-style: none;
+}
+.social-icon li{
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+    color: white;
+}
+.social-icon li i:hover,
+.social-icon li i:active{
+    transform: scale(1.2);
+    color: rgb(80, 191, 255);
+}
+.social-icon li i{
+    transition: all .2s;  
+ }   
+/*===========================================================================================*/
+/* ========================================================================================= */
+  form{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 650px;
+    margin-top: 50px;
+}
+label{
+    margin-left: 10px;
+    color: white;
+    display: inline-block;
+}
+input ,textarea{
+    outline: none;
+    padding: 20px;
+    margin-left: -120px;
+    background-color: rgba(28, 98, 168, 0.01);
+    border: 1px solid rgba(28, 98, 168, 20);
+    cursor: pointer;
+    border-radius: 5px;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+input{
+    height: 50px;
+}
+form .row:last-child{
+    margin-left: 2%;
+}
+input[type=submit]{
+  font-size: 110%;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 30%;
+}
+form .row{
+    width: 150%;
+    margin-bottom: 20px;
+}
+input[type=text], input[type=email], textarea{
+    width: 50%;
+    font-size: 100%;
+    transition: all .3s;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    color: white;
+    background-color: rgba(51, 59, 94, 0.795);
+}
+.chu-4d{
+    color: #ffe240;
+    text-shadow: 1px 1px #FF8040, 2px 2px #FF8040, 3px 3px #FF8040;
+    font: Bold 52px Sketch_Block;
+    -webkit-transition: all 0.12s ease-out;/*chrome & safari*/
+    -moz-transition:all 0.12s ease-out;/*firefox 3.7*/
+    -o-tramsition:all 0.12s ease-out /*Opera*/
+}
+ 
+.chu-4d {
+    position:relative; top:-3px; left:-3px;/*lệch lên trên về phía bên trái 3px so với chữ NTUTS.COM cũ*/
+    text-shadow:1px 1px #FF8040, 2px 2px #FF8040, 3px 3px #FF8040, 4px 4px #FF8040, 5px 5px #FF8040, 6px 6px #FF8040 /*đặtt shadow 6 lớp để tạo hiệu ứng nâng ảnh*/
+}
+.not{
+    width: 50%;
+    font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
